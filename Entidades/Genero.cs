@@ -14,6 +14,9 @@ namespace PeliculasApi.Entidades
         [StringLength(maximumLength:50, ErrorMessage ="el campo {0} no debe superar los 50 caracteres")]
         [PrimeraLetraMayuscula]  /// esta validacion la hice en la clase PrimeraLetraMayusculaAtribute
         public string Nombre { get; set; }
-      
+
+        //creo mi propiedad de navegacion
+        public List<PeliculasGeneros> PeliculasGeneros { get; set; }
+
     }
 }

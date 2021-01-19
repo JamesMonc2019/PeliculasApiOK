@@ -15,5 +15,7 @@ namespace PeliculasApi.Entidades
         public string Biografia { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public string Foto { get; set; }
+        //creo mi propiedad de navegacion
+        public List<PeliculasActores> PeliculasActores { get; set; }
     }
 }

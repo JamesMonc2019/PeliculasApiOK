@@ -133,3 +133,4 @@ C:\Users\James\Documents\ANGULAR\AngularPeliculas\BACKEND\PeliculasAPI\Peliculas
 C:\Users\James\Documents\ANGULAR\AngularPeliculas\BACKEND\PeliculasAPI\PeliculasApi\PeliculasApi\bin\Debug\net5.0\NetTopologySuite.IO.SqlServerBytes.dll
 C:\Users\James\Documents\ANGULAR\AngularPeliculas\BACKEND\PeliculasAPI\PeliculasApi\PeliculasApi\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\James\Documents\ANGULAR\AngularPeliculas\BACKEND\PeliculasAPI\PeliculasApi\PeliculasApi\obj\Debug\net5.0\EFCoreSqlServerNetTopologySuite.cs
+C:\Users\James\Documents\ANGULAR\AngularPeliculas\BACKEND\PeliculasAPI\PeliculasApi\PeliculasApi\bin\Debug\net5.0\Newtonsoft.Json.dll

@@ -14,5 +14,8 @@ namespace PeliculasApi.Entidades
         [StringLength(maximumLength:75)]
         public string Nombre { get; set; }
         public Point Ubicacion { get; set; }  //NetTopologySuite representa mi ubicacion
+
+        //creo mi propiedad de navegacion
+        public List<PeliculasCines> PeliculasCines { get; set; }
     }
 }
