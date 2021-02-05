@@ -19,6 +19,7 @@ using PeliculasApi.Filtros;
 using PeliculasApi.Utilidades;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,7 @@ namespace PeliculasApi
     {
         public Startup(IConfiguration configuration)
         {
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();  //Apaga el mapeo automatico de Identity
             Configuration = configuration;
         }
 
@@ -91,7 +93,10 @@ namespace PeliculasApi
                     ClockSkew = TimeSpan.Zero
                 });
 
-
+            services.AddAuthorization(opciones =>
+            {
+                opciones.AddPolicy("EsAdmin", policy => policy.RequireClaim("role", "admin"));
+            });
 
             services.AddControllers(options => {
                 options.Filters.Add(typeof(FiltroDeExcepcion));

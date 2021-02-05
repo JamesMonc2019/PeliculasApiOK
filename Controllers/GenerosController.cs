@@ -19,6 +19,7 @@ namespace PeliculasApi.Controllers
     [Route("api/generos")]
     [ApiController] // este decorado hace esta validacion en todo mi metodo  // if(!ModelState.IsValid)  {  return BadRequest(ModelState);  }
     //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "EsAdmin")]
     public class GenerosController: ControllerBase  //metodo auxiliar ControllerBase me permite acceder a un cierto numero de metodos auxiliares uno de ellos es poder retornanr un 404
     {
         private readonly ILogger<GenerosController> loggger;
@@ -48,6 +49,7 @@ namespace PeliculasApi.Controllers
             return mapper.Map<List<GeneroDTO>>(generos);
         }
         [HttpGet("todos")]
+        [AllowAnonymous]
         public async Task<ActionResult<List<GeneroDTO>>> Todos()
         {
             var generos = await context.Generos.ToListAsync();
